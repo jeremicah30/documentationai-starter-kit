@@ -1,0 +1,106 @@
+---
+title: Introduction to Jeremicah Licup
+description: Get an overview of Jeremicah Licup, a documentation management platform designed to help you organize and maintain project documentation efficiently.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## What is Jeremicah Licup?
+
+Jeremicah Licup is a powerful documentation management platform that helps you create, organize, and maintain comprehensive project documentation. You can build structured docs sites with version control, search functionality, and collaboration tools. Whether you manage open-source projects, internal wikis, or customer-facing guides, Jeremicah Licup streamlines the process.
+
+Use it to centralize all your Markdown files, MDX components, and custom pages into a professional, searchable knowledge base. Integrate with your Git workflow for seamless updates and previews.
+
+## Key Features
+
+Jeremicah Licup offers essential tools to enhance your documentation workflow:
+
+<Columns cols={3}>
+  <Card title="Version Control" icon="git-branch" href="/configuration">
+    Track changes with Git integration. Preview updates before publishing.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="/quickstart">
+    Full-text search and intuitive sidebar navigation for quick access.
+  </Card>
+  <Card title="Custom Components" icon="code" href="/authentication">
+    Rich MDX support with components like Cards, Steps, and Tabs.
+  </Card>
+</Columns>
+
+These features ensure your docs stay organized and user-friendly.
+
+## Who This Documentation Is For
+
+This guide targets various users working with Jeremicah Licup:
+
+<Tabs>
+  <Tab title="Developers" icon="code">
+    Build and customize docs using MDX and Git. Integrate APIs for dynamic content.
+  </Tab>
+  <Tab title="Project Managers" icon="users">
+    Organize team knowledge bases and track documentation progress.
+  </Tab>
+  <Tab title="Content Writers" icon="edit-3">
+    Write and publish Markdown content with previews and collaboration.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Users" default-open="false">
+  Power users can extend functionality with custom themes and plugins.
+</Expandable>
+
+## Quick Start
+
+Get up and running in minutes:
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://dashboard.example.com` with your email.
+  </Step>
+  <Step title="Connect Repository" icon="git-branch">
+    Link your GitHub repo containing Markdown files.
+  </Step>
+  <Step title="Configure Site" icon="settings">
+    Set your brand color (`#3B82F6`) and domain in the dashboard.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Deploy your first docs site and share the live URL.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Bash,Node.js">
+  ```bash
+  npm install -g @jeremicah-licup/cli
+  jeremicah init my-docs
+  ```
+  ```javascript
+  const Jeremicah = require('@jeremicah-licup/sdk');
+  const docs = new Jeremicah({ apiKey: 'YOUR_API_KEY' });
+  await docs.publish();
+  ```
+</CodeGroup>
+
+## Next Steps and Support
+
+Explore more with these resources:
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Dive into installation and first deployment.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and tokens.
+  </Card>
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Customize themes and advanced settings.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Stay updated with latest releases.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Need help? Check the [community forum](https://dashboard.example.com/support) or contact support at `support@jeremica hlicup.com`.
+</Callout>

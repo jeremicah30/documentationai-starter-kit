@@ -1,0 +1,124 @@
+---
+title: Core Features
+description: Explore the main capabilities of Jeremicah Licup, including document organization, collaboration tools, and customization options for your projects.
+---
+
+## Overview
+
+Jeremicah Licup provides essential tools for managing project documentation effectively. You can organize content into structured workspaces, collaborate seamlessly with teams, track changes with version control, customize appearances, and find information quickly using powerful search features. These capabilities help you maintain organized, up-to-date docs.
+
+<Columns cols={3}>
+  <Card title="Workspaces" icon="folder" href="#workspaces">
+    Group documents logically for better organization.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Work together in real-time with team members.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track and revert changes easily.
+  </Card>
+</Columns>
+
+<Columns cols={2}>
+  <Card title="Customization" icon="palette" href="#customization">
+    Tailor themes and layouts to your needs.
+  </Card>
+  <Card title="Search Tools" icon="search" href="#search">
+    Filter and locate content rapidly.
+  </Card>
+</Columns>
+
+## Organizing Documents into Workspaces
+
+Create workspaces to categorize your documentation. Workspaces act as containers for related docs, making navigation intuitive.
+
+<Steps>
+  <Step title="Create Workspace" icon="plus">
+    Navigate to the dashboard and select "New Workspace".
+  </Step>
+  <Step title="Add Documents" icon="file-plus">
+    Drag and drop files or use the upload button.
+  </Step>
+  <Step title="Rearrange" icon="move">
+    Use drag-and-drop to reorder items within the workspace.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Nest workspaces for hierarchical structures, like projects under teams.
+</Callout>
+
+## Collaborating with Team Members
+
+Invite teammates to collaborate on documents. Share read/write access and communicate via built-in comments.
+
+<Tabs>
+  <Tab title="Invite Users" icon="user-plus">
+    Go to workspace settings, enter email addresses, and set permissions.
+  </Tab>
+  <Tab title="Real-time Editing" icon="edit-3">
+    Multiple users edit simultaneously with live cursors.
+  </Tab>
+  <Tab title="Comments" icon="message-circle">
+    Add threaded discussions on specific sections.
+  </Tab>
+</Tabs>
+
+## Version Control for Documents
+
+Every change creates a version snapshot. You review history, compare diffs, and restore previous states.
+
+<CodeGroup tabs="CLI,API">
+  ```bash
+  # List versions
+  jeremicah versions get --doc-id=doc123
+
+  # Restore version
+  jeremicah versions restore --doc-id=doc123 --version=v1.2
+  ```
+  ```javascript
+  // Fetch version history
+  const versions = await jeremicah.versions.list({ docId: 'doc123' });
+
+  // Restore a version
+  await jeremicah.versions.restore({ docId: 'doc123', version: 'v1.2' });
+  ```
+</CodeGroup>
+
+## Customizing Themes and Layouts
+
+Personalize your docs with custom themes. Adjust colors, fonts, and layouts via a simple config file.
+
+<Expandable title="Advanced Theme Config" default-open="false">
+  Create a `{theme.json}` file in your workspace root:
+
+  ````json
+  {
+    "primaryColor": "#3B82F6",
+    "fontFamily": "Inter, sans-serif",
+    "layout": {
+      "sidebar": true,
+      "darkMode": "auto"
+    }
+  }
+  ````
+
+  Apply changes by saving and refreshing.
+</Expandable>
+
+## Search and Filtering Tools
+
+Use advanced search to query across workspaces. Filter by tags, dates, authors, or content keywords.
+
+| Filter Type | Example Query | Description |
+|-------------|---------------|-------------|
+| Keyword    | `API docs`   | Full-text search |
+| Tag        | `#urgent`    | Tag-based filtering |
+| Date       | `after:2024-01-01` | Time range |
+| Author     | `author:alice` | User-specific |
+
+<Callout kind="info">
+  Combine filters like `API docs #urgent author:alice` for precise results.
+</Callout>
+
+These features form the foundation of Jeremicah Licup. Start with workspaces for organization, then layer on collaboration and customization as your projects grow.

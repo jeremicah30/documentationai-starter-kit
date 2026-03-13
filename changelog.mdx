@@ -1,0 +1,137 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and bug fixes in Jeremicah Licup to stay informed about new features and changes.
+---
+
+## Recent Updates
+
+Stay current with the latest releases. Review changes below to understand new capabilities, fixes, and any required migrations.
+
+<Callout kind="info">
+  You receive notifications for major releases via email if subscribed. Check your account settings at `https://dashboard.example.com/account/notifications`.
+</Callout>
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation editing
+- Introduced customizable themes with your brand color `#3B82F6`
+
+## Improvements
+
+- Enhanced search performance by `{30%}`
+- Better mobile responsiveness for documentation pages
+
+## Bug Fixes
+
+- Fixed rendering issues with nested code blocks
+- Resolved authentication token expiration errors
+
+</Update>
+
+<Update label="2024-09-25" description="v1.2.1" tags={["bugfix", "security"]}>
+
+## Bug Fixes
+
+- Patched potential XSS vulnerabilities in user-generated content
+- Corrected API rate limiting inconsistencies
+
+## Improvements
+
+- Optimized database queries for faster page loads
+
+</Update>
+
+<Update label="2024-09-10" description="v1.2.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Integrated webhook support for custom notifications
+- Added API endpoints for programmatic documentation management
+
+## Breaking Changes
+
+- Updated authentication to use `{API_KEY}` instead of legacy tokens. Migrate by regenerating keys in your dashboard.
+
+## Migration Steps
+
+1. Log in to `https://dashboard.example.com`
+2. Navigate to API settings
+3. Generate new `{API_KEY}`
+
+</Update>
+
+## Migration Guide
+
+For breaking changes in recent releases, follow these structured steps to update your integration smoothly.
+
+<Steps>
+  <Step title="Review Changes" icon="book-open">
+
+  Examine release notes above. Note any deprecated parameters like old token formats.
+
+  </Step>
+  <Step title="Update Configuration" icon="settings">
+
+  ```javascript
+  // Old way
+  const config = { token: 'legacy-token' };
+
+  // New way
+  const config = { apiKey: 'YOUR_API_KEY' };
+  ```
+
+  Replace legacy tokens with new `{API_KEY}` values.
+
+  </Step>
+  <Step title="Test Integration" icon="play-circle">
+
+  Run your test suite against `https://api.example.com/v1/test-endpoint`.
+
+  </Step>
+  <Step title="Deploy" icon="rocket">
+
+  Deploy to production and monitor logs for `{30 minutes}`.
+
+  </Step>
+</Steps>
+
+<Expandable title="Advanced Migration for Webhooks" default-open="false">
+
+If you use webhooks, update your endpoint to handle new payload structure:
+
+````javascript
+// New webhook payload
+{
+  "event": "doc.updated",
+  "data": {
+    "id": "doc-123",
+    "changes": ["title", "content"]
+  }
+}
+````
+
+Configure at `https://dashboard.example.com/webhooks`.
+
+</Expandable>
+
+## Upcoming Roadmap
+
+Discover planned enhancements to help you plan ahead.
+
+<Columns cols={3}>
+  <Card title="AI Assistance" icon="zap" href="#ai-assistance">
+    Automated content generation and summaries coming in v1.4.0.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart" href="#analytics">
+    Track documentation usage and engagement metrics.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Full Git integration for documentation workflows.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Suggest features by opening an issue on GitHub or contacting support. Your feedback shapes Jeremicah Licup's future.
+</Callout>

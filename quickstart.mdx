@@ -1,0 +1,146 @@
+---
+title: Quickstart Guide
+description: Set up your account and create your first documentation space in just a few minutes to start organizing your projects.
+---
+
+<Callout kind="info" title="Prerequisites">
+Before starting, ensure you have:
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: Existing project files in Markdown, PDF, or HTML format for import
+</Callout>
+
+## Sign Up for an Account
+
+Get started by creating your Jeremicah Licup account. The process takes less than two minutes.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://jeremica hlicup.com/dashboard` and click **Sign Up**.
+  </Step>
+
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, create a password, and complete the CAPTCHA.
+  </Step>
+
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification link from Jeremicah Licup and click it to activate your account.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Save your credentials securely. Use a password manager for best security.
+</Callout>
+
+## Create Your First Documentation Space
+
+Once logged in, set up a space to organize your projects.
+
+<Steps>
+  <Step title="Click New Space" icon="plus">
+    From the dashboard, select **New Documentation Space**.
+  </Step>
+
+  <Step title="Name Your Space" icon="edit-3">
+    Enter a name like `My Project Docs` and choose a description. Select **Create**.
+  </Step>
+
+  <Step title="Customize Settings" icon="settings">
+    Add your brand color `#3B82F6` and set permissions for team access if needed.
+  </Step>
+</Steps>
+
+## Add Your Initial Project Documents
+
+Populate your space with content. Start with a simple Markdown page.
+
+<CodeGroup tabs="Markdown,HTML">
+````markdown
+# Welcome to My Project
+
+## Overview
+
+This is your first document.
+
+- Feature 1
+- Feature 2
+
+**Next:** Edit and publish.
+````
+
+````html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+</head>
+<body>
+  <h1>Welcome to My Project</h1>
+  <h2>Overview</h2>
+  <p>This is your first document.</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+  </ul>
+</body>
+</html>
+````
+</CodeGroup>
+
+Copy the code above into the editor and save as `index.md` or `index.html`.
+
+## Basic Navigation and Editing
+
+Learn to move around and make changes efficiently.
+
+<Tabs>
+  <Tab title="Navigation" icon="compass">
+    Use the sidebar to browse spaces and documents. Search with `<kbd>Ctrl</kbd>+<kbd>K</kbd>` (`<kbd>Cmd</kbd>+<kbd>K</kbd>` on macOS).
+  </Tab>
+
+  <Tab title="Editing" icon="edit">
+    Click **Edit** to enter rich text or Markdown mode. Preview changes with **Preview**.
+  </Tab>
+</Tabs>
+
+## Importing Existing Content
+
+Bring in your current docs seamlessly.
+
+<Steps>
+  <Step title="Select Import" icon="upload">
+    In your space, click **Import** from the top menu.
+  </Step>
+
+  <Step title="Choose Source" icon="cloud">
+    Upload files or connect GitHub/Notion. Drag and drop ZIP archives up to 50MB.
+  </Step>
+
+  <Step title="Review and Publish" icon="check-circle">
+    Map files to folders and click **Import**. Edits sync automatically.
+  </Step>
+</Steps>
+
+<Expandable title="Advanced Import Options" default-open="false">
+Support formats include MDX, PDF (converted to editable text), and DOCX. For large repos, use the API endpoint `https://api.jeremica hlicup.com/v1/import`.
+</Expandable>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Customize Themes" icon="palette" href="#customize-themes">
+    Apply your `#3B82F6` brand color across all docs.
+  </Card>
+
+  <Card title="Collaborate" icon="users" href="/authentication">
+    Invite team members and set roles.
+  </Card>
+
+  <Card title="Publish" icon="globe" href="/guides/publishing">
+    Share live docs with custom domains.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+Congratulations! You've set up Jeremicah Licup. Explore more in the [Introduction](/introduction).
+</Callout>
